@@ -19,6 +19,8 @@ void times_table(void)
 
 			if (result < 10)
 				_putchar(' '); /* Extra space for single-digit numbers */
+			else
+				_putchar(result / 10 + '0'); /* First digit of two-digit number */
 
 			_putchar(result % 10 + '0');
 		}
