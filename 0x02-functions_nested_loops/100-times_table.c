@@ -1,14 +1,20 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_times_table - Prints the n times table, starting with 0.
+ * print_times_table - Prints the n times table up to 13.
  * @n: The number of times.
  */
 void print_times_table(int n)
 {
-	if (n != 0)
-		return;
+    int i, j;
 
-	printf("0\n");
+    for (i = 0; i <= n; i++)
+    {
+        for (j = 0; j <= 13; j++)
+        {
+            printf("%-4d", i * j);
+        }
+        printf("\n");
+    }
 }
 
