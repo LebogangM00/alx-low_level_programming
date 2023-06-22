@@ -13,7 +13,7 @@ i = 0;
 
 while (i < 10)
 {
-printf("%c", i);
+printf("%d", i);
 i++;
 }
 
