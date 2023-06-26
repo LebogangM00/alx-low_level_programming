@@ -20,8 +20,9 @@ sign *= -1;
 if (s[i] >= '0' && s[i] <= '9')
 {
 num = num * 10 + (s[i] - '0');
-
-if (s[i + 1] < '0' || s[i + 1] > '9')
+}
+else if (num != 0)
+{
 break;
 }
 
