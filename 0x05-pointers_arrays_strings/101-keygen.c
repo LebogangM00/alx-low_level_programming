@@ -2,32 +2,29 @@
 #include <stdlib.h>
 #include <time.h>
 
-/**
- * main - Entry point.
- *
- * Return: Always 0.
- */
+#define PASSWORD_LENGTH 10
+
 int main(void)
 {
-int pass[100];
-int i, sum, n;
+    srand(time(NULL));
 
-sum = 0;
-srand(time(NULL));
+    char password[PASSWORD_LENGTH + 1];
 
-for (i = 0; i < 100; i++)
-{
-pass[i] = rand() % 78;
-sum += (pass[i] + '0');
-putchar(pass[i] + '0');
-if ((2772 - sum) < 78)
-{
-n = 2772 - sum;
-sum += n;
-putchar(n + '0');
-break;
-}
-}
-return (0);
+    for (int i = 0; i < PASSWORD_LENGTH; i++)
+    {
+        int randomChar = rand() % 62;
+        if (randomChar < 26)
+            password[i] = 'A' + randomChar;
+        else if (randomChar < 52)
+            password[i] = 'a' + (randomChar - 26);
+        else
+            password[i] = '0' + (randomChar - 52);
+    }
+
+    password[PASSWORD_LENGTH] = '\0';
+
+    printf("%s", password);
+
+    return 0;
 }
 
