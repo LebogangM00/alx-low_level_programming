@@ -1,0 +1,36 @@
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ * main - Entry point
+ * @argc: The number of command line arguments
+ * @argv: An array containing the command line arguments
+ *
+ * Return: 0 on success, 1 on error
+ */
+int main(int argc, char *argv[])
+{
+int num1, num2, result;
+
+if (argc != 3)
+{
+_putchar('E');
+_putchar('r');
+_putchar('r');
+_putchar('o');
+_putchar('r');
+_putchar('\n');
+return (1);
+}
+
+num1 = atoi(argv[1]);
+num2 = atoi(argv[2]);
+result = num1 * num2;
+
+_putchar(result / 10 + '0');
+_putchar(result % 10 + '0');
+_putchar('\n');
+
+return (0);
+}
+
