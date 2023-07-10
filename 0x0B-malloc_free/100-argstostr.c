@@ -26,7 +26,7 @@ argLength++;
 totalLength += argLength + 1; /* Add 1 for newline */
 }
 
-concatenated = malloc((totalLength + 1) * sizeof(char)); /* Add 1 for null-terminator */
+concatenated = malloc((totalLength + 1) * sizeof(char)); /* Add 1 for null */
 if (concatenated == NULL)
 return (NULL);
 
